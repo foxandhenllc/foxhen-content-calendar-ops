@@ -129,41 +129,41 @@ export const sample: {
     }
   ],
   "checks": [
-    {
-      "id": "payer",
-      "label": "Payer or owner is clear",
-      "passed": true,
-      "weight": 18
-    },
-    {
-      "id": "deliverable",
-      "label": "Deliverable has acceptance criteria",
-      "passed": true,
-      "weight": 18
-    },
-    {
-      "id": "friction",
-      "label": "Account/access friction is documented",
-      "passed": false,
-      "weight": 14
-    },
-    {
-      "id": "handoff",
-      "label": "Handoff package is generated",
-      "passed": false,
-      "weight": 16
-    },
-    {
-      "id": "reuse",
-      "label": "Repeatable pipeline note exists",
-      "passed": true,
-      "weight": 12
-    }
+      {
+          "id": "owner",
+          "label": "Channel owner and approval path are clear",
+          "passed": true,
+          "weight": 18
+      },
+      {
+          "id": "criteria",
+          "label": "Post angle and asset requirements are written",
+          "passed": true,
+          "weight": 18
+      },
+      {
+          "id": "assets",
+          "label": "Blocked assets or account access are documented",
+          "passed": false,
+          "weight": 14
+      },
+      {
+          "id": "handoff",
+          "label": "Schedule/export package is generated",
+          "passed": false,
+          "weight": 16
+      },
+      {
+          "id": "reuse",
+          "label": "Repurposing note exists",
+          "passed": true,
+          "weight": 12
+      }
   ],
   "deliverables": [
-    "Ranked board",
-    "Editable item inspector",
-    "Readiness checklist",
-    "Exportable handoff report"
+      "Publishing queue",
+      "Asset and approval tracker",
+      "Publish readiness checklist",
+      "Exportable schedule report"
   ]
 };
