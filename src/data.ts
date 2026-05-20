@@ -1,12 +1,44 @@
-export const sample = {
+export type ItemStatus = "backlog" | "active" | "blocked" | "ready" | "done";
+
+export type WorkItem = {
+  id: string;
+  title: string;
+  category: string;
+  owner: string;
+  status: ItemStatus;
+  priority: number;
+  effort: number;
+  friction: number;
+  value: number;
+  due: string;
+  notes: string;
+};
+
+export type QualityCheck = {
+  id: string;
+  label: string;
+  passed: boolean;
+  weight: number;
+};
+
+export const sample: {
+  repoName: string;
+  title: string;
+  subtitle: string;
+  serviceLine: string;
+  description: string;
+  repositoryUrl: string;
+  liveDemoUrl: string;
+  theme: { accent: string; accent2: string; ink: string; soft: string; warm: string };
+  items: WorkItem[];
+  checks: QualityCheck[];
+  deliverables: string[];
+} = {
   "repoName": "foxhen-content-calendar-ops",
   "title": "Content Calendar Ops",
-  "subtitle": "Publishing workflow sample",
+  "subtitle": "publishing queue",
   "serviceLine": "Content operations dashboard",
-  "heroTitle": "A calm publishing calendar for content-heavy teams.",
-  "heroCopy": "A fictional editorial ops board that turns scattered ideas into assigned posts, approval states, asset readiness, and exportable schedule notes.",
-  "primaryAction": "Open calendar",
-  "secondaryAction": "Export queue",
+  "description": "Turn content ideas into assigned posts, assets, approvals, schedule exports, and reuse notes.",
   "repositoryUrl": "https://github.com/foxandhenllc/foxhen-content-calendar-ops",
   "liveDemoUrl": "https://foxhen-content-calendar-ops.vercel.app",
   "theme": {
@@ -14,115 +46,124 @@ export const sample = {
     "accent2": "#f4ba62",
     "ink": "#160711",
     "soft": "#faedf3",
-    "warm": "#fff4df",
-    "surface": "#fffaf4",
-    "muted": "#5c667a",
-    "border": "rgba(7, 18, 31, 0.12)"
+    "warm": "#fff4df"
   },
-  "metrics": [
+  "items": [
     {
-      "label": "Scheduled posts",
-      "value": "18",
-      "note": "next 14 days"
-    },
-    {
-      "label": "Asset readiness",
-      "value": "82%",
-      "note": "+26 pts"
-    },
-    {
-      "label": "Blocked items",
-      "value": "4",
-      "note": "needs approval"
-    }
-  ],
-  "stages": [
-    {
-      "label": "Ideas",
-      "detail": "Capture rough topics and attach audience, channel, and proof of value.",
-      "status": "ready",
-      "owner": "Editor",
-      "index": 1
-    },
-    {
-      "label": "Production",
-      "detail": "Move assets into draft, design, caption, and QA lanes.",
-      "status": "active",
-      "owner": "Studio",
-      "index": 2
-    },
-    {
-      "label": "Approval",
-      "detail": "Keep blocked posts visible with exact decision needed.",
-      "status": "waiting",
-      "owner": "Owner",
-      "index": 3
-    },
-    {
-      "label": "Publish",
-      "detail": "Package a schedule export with reminders and fallback slots.",
-      "status": "queued",
-      "owner": "Ops",
-      "index": 4
-    }
-  ],
-  "workItems": [
-    {
+      "id": "con-1",
       "title": "Founder post",
-      "detail": "Convert raw note into LinkedIn-ready draft",
-      "status": "ready"
+      "category": "Intake",
+      "owner": "Chris",
+      "status": "active",
+      "priority": 5,
+      "effort": 2,
+      "friction": 1,
+      "value": 5,
+      "due": "Today",
+      "notes": "Sample publishing queue work item for content operations dashboard."
     },
     {
+      "id": "con-2",
       "title": "Case study clip",
-      "detail": "Attach thumbnail and caption checklist",
-      "status": "active"
+      "category": "Build",
+      "owner": "Fox & Hen",
+      "status": "backlog",
+      "priority": 4,
+      "effort": 4,
+      "friction": 2,
+      "value": 4,
+      "due": "24h",
+      "notes": "Sample publishing queue work item for content operations dashboard."
     },
     {
+      "id": "con-3",
       "title": "Email teaser",
-      "detail": "Waiting on product screenshot",
-      "status": "waiting"
+      "category": "Review",
+      "owner": "Buyer",
+      "status": "blocked",
+      "priority": 3,
+      "effort": 3,
+      "friction": 4,
+      "value": 4,
+      "due": "48h",
+      "notes": "Sample publishing queue work item for content operations dashboard."
     },
     {
+      "id": "con-4",
+      "title": "Shortform script",
+      "category": "Export",
+      "owner": "Automation",
+      "status": "ready",
+      "priority": 4,
+      "effort": 2,
+      "friction": 2,
+      "value": 3,
+      "due": "This week",
+      "notes": "Sample publishing queue work item for content operations dashboard."
+    },
+    {
+      "id": "con-5",
+      "title": "Newsletter slot",
+      "category": "Intake",
+      "owner": "QA",
+      "status": "backlog",
+      "priority": 2,
+      "effort": 1,
+      "friction": 1,
+      "value": 3,
+      "due": "Waiting",
+      "notes": "Sample publishing queue work item for content operations dashboard."
+    },
+    {
+      "id": "con-6",
       "title": "Friday recap",
-      "detail": "Queued for export bundle",
-      "status": "queued"
+      "category": "Build",
+      "owner": "Chris",
+      "status": "done",
+      "priority": 5,
+      "effort": 5,
+      "friction": 3,
+      "value": 5,
+      "due": "Next pass",
+      "notes": "Sample publishing queue work item for content operations dashboard."
+    }
+  ],
+  "checks": [
+    {
+      "id": "payer",
+      "label": "Payer or owner is clear",
+      "passed": true,
+      "weight": 18
+    },
+    {
+      "id": "deliverable",
+      "label": "Deliverable has acceptance criteria",
+      "passed": true,
+      "weight": 18
+    },
+    {
+      "id": "friction",
+      "label": "Account/access friction is documented",
+      "passed": false,
+      "weight": 14
+    },
+    {
+      "id": "handoff",
+      "label": "Handoff package is generated",
+      "passed": false,
+      "weight": 16
+    },
+    {
+      "id": "reuse",
+      "label": "Repeatable pipeline note exists",
+      "passed": true,
+      "weight": 12
     }
   ],
   "deliverables": [
-    {
-      "title": "Calendar board",
-      "detail": "A weekly view with channel, owner, deadline, and state."
-    },
-    {
-      "title": "Asset queue",
-      "detail": "Clear production blockers and missing creative fields."
-    },
-    {
-      "title": "Export memo",
-      "detail": "A human-readable schedule handoff for publishing."
-    }
-  ],
-  "timeline": [
-    {
-      "time": "0-2 hrs",
-      "detail": "Inventory content and channels"
-    },
-    {
-      "time": "2-12 hrs",
-      "detail": "Structure queue and approval workflow"
-    },
-    {
-      "time": "12-24 hrs",
-      "detail": "QA schedule and prepare export notes"
-    }
-  ],
-  "proof": [
-    "Useful for content ops and social scheduling gigs.",
-    "Shows operator thinking around approvals and reuse.",
-    "Keeps demo data fictional and brand-safe."
+    "Ranked board",
+    "Editable item inspector",
+    "Readiness checklist",
+    "Exportable handoff report"
   ]
-} as const;
-
-export type StageStatus = "ready" | "active" | "waiting" | "queued";
-export type DemoStage = (typeof sample.stages)[number];
-export type WorkItem = (typeof sample.workItems)[number];
+};
