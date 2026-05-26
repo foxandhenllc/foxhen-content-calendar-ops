@@ -36,6 +36,21 @@ See [docs/workflow-template.md](docs/workflow-template.md) for the sample publis
 - Use checks as publish gates before export.
 - Download JSON to seed Airtable, Sheets, or a CMS import.
 
+## SEO / AIO Discoverability
+
+**Plain-language answer:** Use this repo to manage ideas, assignments, approvals, publishing readiness, reuse notes, and schedule exports.
+
+**Who it helps:** small marketing teams, agencies, and local businesses managing publishing queues.
+
+**Search intents covered:**
+
+- content calendar operations board
+- publishing approval workflow
+- small business content calendar
+- content readiness dashboard
+
+**Why this repo is useful:** It exposes what is ready, blocked, assigned, or reusable so content work becomes operational instead of scattered.
+
 ## Local Run
 
 ```bash

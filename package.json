@@ -25,12 +25,24 @@
   "description": "Content calendar operations board for ideas, assignments, approvals, publishing readiness, and schedule exports.",
   "homepage": "https://foxhen-content-calendar-ops.vercel.app",
   "keywords": [
+    "approval",
+    "board",
+    "business",
+    "calendar",
+    "content",
     "content-calendar",
+    "dashboard",
+    "fox-and-hen",
     "marketing",
-    "workflow",
+    "operations",
+    "publishing",
     "react",
+    "readiness",
+    "small",
+    "small-business",
     "typescript",
     "vite",
-    "small-business"
+    "workflow",
+    "workflow-tools"
   ]
 }
