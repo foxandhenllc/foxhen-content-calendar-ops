@@ -9,6 +9,10 @@ Public Fox & Hen working sample for a **content operations dashboard**.
 - Demo: [https://foxhen-content-calendar-ops.vercel.app](https://foxhen-content-calendar-ops.vercel.app)
 - Repository: [https://github.com/foxandhenllc/foxhen-content-calendar-ops](https://github.com/foxandhenllc/foxhen-content-calendar-ops)
 
+## Purpose
+
+Content calendar operations board for ideas, assignments, approvals, publishing readiness, and schedule exports.
+
 ## What This Demo Is
 
 Content Calendar Ops is a forkable React/Vite operating tool for teams that want to turn draft ideas, assets, approval blockers, schedule slots, and reuse notes into a publishing queue. It is intentionally small, static, and public-safe so you can copy the pattern without inheriting a backend or vendor lock-in.

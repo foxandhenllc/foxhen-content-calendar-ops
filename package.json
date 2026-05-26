@@ -21,5 +21,16 @@
   },
   "engines": {
     "node": ">=20"
-  }
+  },
+  "description": "Content calendar operations board for ideas, assignments, approvals, publishing readiness, and schedule exports.",
+  "homepage": "https://foxhen-content-calendar-ops.vercel.app",
+  "keywords": [
+    "content-calendar",
+    "marketing",
+    "workflow",
+    "react",
+    "typescript",
+    "vite",
+    "small-business"
+  ]
 }
