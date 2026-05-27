@@ -23,7 +23,7 @@
     "node": ">=20"
   },
   "description": "Content calendar operations board for ideas, assignments, approvals, publishing readiness, and schedule exports.",
-  "homepage": "https://foxhen-content-calendar-ops.vercel.app",
+  "homepage": "https://freetoolsforpeople.com/content-calendar-ops",
   "keywords": [
     "approval",
     "board",

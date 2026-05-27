@@ -6,7 +6,7 @@ Public Fox & Hen working sample for a **content operations dashboard**.
 
 ## Live Demo
 
-- Demo: [https://foxhen-content-calendar-ops.vercel.app](https://foxhen-content-calendar-ops.vercel.app)
+- Demo: [https://freetoolsforpeople.com/content-calendar-ops](https://freetoolsforpeople.com/content-calendar-ops)
 - Repository: [https://github.com/foxandhenllc/foxhen-content-calendar-ops](https://github.com/foxandhenllc/foxhen-content-calendar-ops)
 
 ## Purpose

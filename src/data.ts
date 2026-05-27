@@ -40,7 +40,7 @@ export const sample: {
   "serviceLine": "Content operations dashboard",
   "description": "Turn content ideas into assigned posts, assets, approvals, schedule exports, and reuse notes.",
   "repositoryUrl": "https://github.com/foxandhenllc/foxhen-content-calendar-ops",
-  "liveDemoUrl": "https://foxhen-content-calendar-ops.vercel.app",
+  "liveDemoUrl": "https://freetoolsforpeople.com/content-calendar-ops",
   "theme": {
     "accent": "#8b3f5d",
     "accent2": "#f4ba62",
